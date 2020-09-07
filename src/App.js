@@ -5,6 +5,7 @@ import { Alert } from './component/layout/Alert';
 import { User } from './component/users/User';
 import { Home } from './component/pages/Home';
 import { About } from './component/pages/About';
+import { NotFound } from './component/pages/404';
 import GithubState from './context/github/GithubState';
 import AlertState from './context/alert/AlertState';
 import './App.css';
@@ -22,6 +23,7 @@ const App = () => {
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/user/:login' component={User} />
+                <Route component={NotFound} />
               </Switch>
             </div>
           </div>
